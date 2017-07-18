@@ -1,0 +1,50 @@
+<section class="container">
+  <section class="form-container">
+    <h2>New Character</h2>
+    <form id="new-character-form" class="character-form">
+      <div class="field">
+        <label for="name">Name: </label>
+        <input type="text" name="name" [(ngModel)]="characterToCreateOrEdit.name">
+      </div>
+      <div class="field">
+        <label for="occupation">Occupation: </label>
+        <input type="text" name="occupation" [(ngModel)]="characterToCreateOrEdit.occupation">
+      </div>
+      <div class="field">
+        <label for="weapon">Weapon: </label>
+        <input type="text" name="weapon" [(ngModel)]="characterToCreateOrEdit.weapon">
+      </div>
+      <div class="field">
+        <label for="debt">Has debt: </label>
+        <input name="debt" type="checkbox" [(ngModel)]="characterToCreateOrEdit.debt">
+      </div>
+      <button id="send-data" (click)="createNew()">Create</button>
+    </form>
+  </section>
+  <section class="form-container">
+    <h2>Edit Character</h2>
+    <form id="edit-character-form" class="character-form">
+      <div class="field">
+        <label for="id">ID: </label>
+        <input type="text" name="chr-id" [(ngModel)]="characterToCreateOrEdit.id">
+      </div>
+      <div class="field">
+        <label for="name">Name: </label>
+        <input type="text" name="name" [(ngModel)]="characterToCreateOrEdit.name">
+      </div>
+      <div class="field">
+        <label for="occupation">Occupation: </label>
+        <input type="text" name="occupation" [(ngModel)]="characterToCreateOrEdit.occupation">
+      </div>
+      <div class="field">
+        <label for="weapon">Weapon: </label>
+        <input type="text" name="weapon" [(ngModel)]="characterToCreateOrEdit.weapon">
+      </div>
+      <div class="field">
+        <label for="debt">Has debt: </label>
+        <input name="debt" type="checkbox" [(ngModel)]="characterToCreateOrEdit.debt">
+      </div>
+      <button id="send-data" (click)="editOne(characterToCreateOrEdit.id)">Update</button>
+    </form>
+  </section>
+</section>
